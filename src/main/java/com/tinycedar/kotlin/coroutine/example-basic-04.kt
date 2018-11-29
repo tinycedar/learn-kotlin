@@ -1,16 +1,14 @@
 package com.tinycedar.kotlin.coroutine
 
-import kotlinx.coroutines.experimental.CommonPool
-import kotlinx.coroutines.experimental.delay
-import kotlinx.coroutines.experimental.launch
-import kotlinx.coroutines.experimental.runBlocking
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 /**
  * Created by daniel on 03/04/2017.
  */
-
 fun main(args: Array<String>) = runBlocking {
-    val job = launch(CommonPool) {
+    val job = launch {
         doWorld()
     }
     println("Hello, ")

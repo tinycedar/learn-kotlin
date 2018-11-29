@@ -1,12 +1,11 @@
 package com.tinycedar.kotlin.coroutine
 
-import kotlinx.coroutines.experimental.CommonPool
-import kotlinx.coroutines.experimental.delay
-import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
-
-fun main(args: Array<String>) {
-    launch(CommonPool) {
+fun main(args: Array<String>) = runBlocking {
+    launch {
         delay(1000L)
         println("world! " + Thread.currentThread().name)
     }
